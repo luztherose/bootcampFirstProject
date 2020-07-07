@@ -27,14 +27,11 @@ footer {
     background-color: #500801;
 }
 body,
-h1,
-h2, 
 .far,
 .fab, 
 .fa-bars,
 button,
-.footer-nav ul li a,
-.secondary-links a {
+a {
     color: #FFF;
 }
 .juno-brand-name, 
@@ -53,11 +50,6 @@ button,
 .secondary-links {
     font-family: 'Petit Formal Script', cursive;
 }
-h1, 
-h2, 
-::placeholder {
-    font-weight: lighter;
-}
 body, 
 button, 
 .secondary-links {
@@ -71,11 +63,15 @@ body {
     background-color:#815600 ;
 }
 button,
-.secondary-links a {
+a {
     font-size: 25px;
     border: none;
+    font-weight: 300;
 }
-.secondary-links a {
+ul {
+    list-style: none;
+}
+a {
     text-decoration: none;
 }
 .far {
@@ -96,6 +92,7 @@ button,
     .fa-bars, 
     .hand-crafted img,
     button,
+    .secondary-links,
     .far, 
     .single-bags-pic img,
     .input-email {
@@ -110,6 +107,12 @@ button,
     .latest-collection img,
     .hand-crafted .secondary-links {
         position: relative;
+    }
+    h1, 
+    h2,
+    button,
+    a {
+        font-weight: 400;
     }
     h1, 
     h2, 
@@ -128,20 +131,17 @@ button,
     button,
     .single-bags-pic img {
         margin: 0 auto;
-    }
+    } 
     .secondary-links {
-        display: block;
         width: 48%;
         text-align: center;
         margin: 0 auto;
-    }
-    .secondary-links  {
         padding: 5px 20px;
     }
     .secondary-links a {
         font-size: 1em;
     }
-    /* ==================== head section =================*/
+    /* ================ head section =============*/
     h1 {
         clear: both;
         font-size: 1.8em;
@@ -161,7 +161,7 @@ button,
         font-size: 40px;
         right: 20px;
     }
-    /* hand crafted section */
+    /* ================ hand crafted section =============*/
     .hand-crafted h2 {
         margin-top: 80px;
     }
@@ -188,7 +188,7 @@ button,
         position: relative;
         top: 40px;
     }
-    /* latest collection section */
+    /* ================ latest collection section  =============*/
     .latest-collection {
         padding-bottom: 20px;
         border: 0.9px solid silver;
@@ -205,9 +205,6 @@ button,
         display: inline-block;
         width: 45%;
     }
-    /* .latest-collection img {
-        margin: 40px 0px;
-    } */
     .latest-collection span:first-of-type {
         float: right;
     }
@@ -218,8 +215,7 @@ button,
     .white-bag-with-sunglasses img {
         margin-left: 12px;
     }
-    /* aside section catalogue, events, collaborations */
-
+    /* =========== catalogue, events, collaborations ===========*/
     .far {
         font-size: 4.5em;
     }
@@ -233,8 +229,7 @@ button,
         padding: 40px 0;
         font-size: 50%;
     }
-    /* Fall Trends  */
-
+    /* =========== Fall Trends  ===========*/
     .single-bags-pic img {
         height: 180px;
         margin-top: 40px;
@@ -249,14 +244,14 @@ button,
         font-size: 15px;
         line-height: 26px;
     }
-    /* Vegan Leather */
+    /* =========== Vegan Leather ===========*/
     .vegan-leather {
         margin-bottom: 30px;
     }
     .vegan-leather h2 {
         padding-top: 30px;
     }
-    /* Footer */
+    /* ===========  Footer ===========*/
     .desktop-footer-nav {
         display: none;
     }
@@ -269,12 +264,9 @@ button,
     }
     .footer-nav ul li {
         display: inline;
-        list-style: none;
     }
     .footer-nav ul li a {
-        text-decoration: none;
         text-transform: capitalize;
-        font-weight: 400;
         font-size: 15px;
         margin: 0 10px;
     }
@@ -282,11 +274,12 @@ button,
         margin-bottom: 10px;
         font-size: 30px;
     }
-    .stay-update {
+    .stay-update,
+    label,
+    .juno-brand-name {
         position: relative;
     }
     label {
-        position: relative;
         font-size: 15px;
         margin-left: 3%;
         margin-bottom: 10px;
@@ -302,16 +295,14 @@ button,
     }
     ::placeholder {
         font-size: 12px;
+        font-weight: lighter;
     }
     .juno-brand-name {
         clear: both;
-        position: relative;
         padding-top: 5px;
     }
     .juno-brand-name a {
-        text-decoration: none;
         font-size: 12px;
-        color: white;
     }
     footer p {
         font-size: 12px;
@@ -326,14 +317,12 @@ button,
 }
 @media(min-width:400px) {
     h1 {
-        
         font-size: 2.4em;
     }
-    .stay-update {
-        position: relative;
+    .single-bags-pic img {
+        height: 220px;
     }
     label {
-        position: relative;
         margin-left: 13%;
     }
     .footer-nav {
@@ -342,6 +331,20 @@ button,
     .footer-nav li {
         display: inline-block;
         margin: 0 3%;
+    }
+}
+@media(min-width:600px) {
+    h1 {
+        width: 70%;
+    }
+    .single-bags-pic img {
+        height: 275px;
+    }
+    .group-bags {
+        width: 90%;
+    }
+    label {
+        margin-left:20%;
     }
 }
 @media(min-width:700px) {
@@ -354,7 +357,7 @@ button,
         margin-top: 50px;
     }
     .single-bags-pic img {
-        height: 70%;
+        height: 350px;
         top:60px;
     }
     .hand-crafted h2 {
@@ -369,7 +372,7 @@ button,
     .hand-crafted p {
         font-size: 0.8em;
     }
-    /* footer */
+    /* ===========  Footer ===========*/
     .footer-nav {
         padding-top: 40px;
     }
@@ -378,24 +381,23 @@ button,
         margin: 0 6%;
     }
     label {
-        position: relative;
         font-size: 18px;
         margin-left:25%;
         margin-bottom: 20px;
     }
 }
 @media(min-width:886px) {
-    /* generals */
+    /* ===========  generals ===========*/
+    .group-bags {
+        width: 100%;
+    }
     ul {
-        list-style: none;
         padding: 0;
         margin: 0;
     }
-    li a {
+    button,
+    a {
         font-size: 25px;
-        color: #FFF;
-        font-weight: 400;
-        text-decoration: none;
     }
     .main-nav ul li {
         float: left;
@@ -414,6 +416,7 @@ button,
     body {
         font-size: 20px;
     }
+    /* ===========  header ===========*/
     h1 {
         font-size: 55px;
         line-height: 65.3px;
@@ -432,12 +435,6 @@ button,
     }
     h2 {
         font-size: 45px;
-    }
-    button,
-    .secondary-links a {
-        font-size: 25px;
-        border: none;
-        font-weight: 400;
     }
     .secondary-links {
         width: 36%;
@@ -475,7 +472,7 @@ button,
     .fa-instagram {
         margin-bottom: 150px;
     }
-    /* /////////////////////// */
+    /* =========== hand crafted ===========*/
     .square-photo {
         float: left;
         width: calc(35% - 60px);
@@ -494,7 +491,7 @@ button,
         width: 60%;
         float: left;
     }
-    /* ///////////// */
+    /* ===========  latest collection ===========*/
     .latest-collection  {
         clear: both;
         width: 100%;
@@ -529,8 +526,7 @@ button,
     .white-bag-with-sunglasses img {
         margin-left: 45px;
     }
-    /* /////////////////////////////////// */
-    /* aside section catalogue, events, collaborations */
+    /* =========== catalogue, events, collaborations ===========*/
     .icons {
         padding: 40px 50px 40px 0;
         padding-left:28%;
@@ -577,7 +573,7 @@ button,
         margin-top: -58px;
         margin-left: 68%;
     }
-    /* ////////////////////////////// */
+    /* =========== ***** ===========*/
     .fall-trends-container, 
     .vegan-leather-container {
         display: inline-block;
@@ -625,7 +621,7 @@ button,
         width: 21%;
         margin-left: 5px;
     }
-    /* /////////////// */
+    /* =========== **** ===========*/
     .vegan-leather-container img {
         float: left;
         width: 50%;
@@ -651,7 +647,7 @@ button,
         width: 40%;
         margin-left: 50px;
     }
-    /* Footer */
+    /* =========== Footer ===========*/
     .footer {
         position: relative;
     }
@@ -662,9 +658,6 @@ button,
         display: block;
         line-height: 25px;
         margin-left: 40px;
-    }
-    footer nav li a {
-        font-size: 20px;
     }
     footer h2 {
         margin-top: 0;
@@ -694,7 +687,6 @@ button,
         margin: 12px 0;
     }
     button {
-        font-size: 15px;
         position: absolute;
         right: 12px;
         bottom: 9px;
@@ -715,7 +707,6 @@ button,
         padding-top: 10px;
     }
     .juno-brand-name a {
-        text-decoration: none;
         font-size: 12px;
         color: white;
     }
@@ -824,12 +815,9 @@ button,
     .main-nav ul li a {
         font-size: 0;
     }
-    .secondary-links li a,
-    button,
     .main-nav ul li a {
         font-size: 25px;
     }
-    /* /////////// */
     .fa-images {
         left: -110px;
     }
@@ -851,9 +839,8 @@ button,
     .icons p:last-child {
         margin-left: 53%;
     }
-    /* /////// */
+    /* =========== Footer ===========*/
     button {
-        font-size: 25px;
         padding-bottom: 5px;
         bottom: 7px;
     }
@@ -862,7 +849,6 @@ button,
     }
     .desktop-footer-nav li a{
         font-size: 20px;
-        font-weight: 400;
     }
     .stay-update {
         width: 45%;
